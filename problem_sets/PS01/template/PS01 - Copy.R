@@ -39,18 +39,29 @@ y <- c(105, 69, 86, 100, 82, 111, 104, 110, 87, 108, 87, 90, 94, 113, 112, 98, 8
 mean_y <- mean(y)
 s_y <- sd(y)
 
-# at 90% Confidence interval, df = 25-1 = 24, t-score is 2.064 for two-tail probabilities.
+# at 90% Confidence interval, df = 25-1 = 24, t-statistic is 1.711 for two-tail probabilities.
+# first find standard error
 se <- s_y / sqrt(length(y))
-t <- 2.064
+t <- 1.711
 ci_lower <- mean_y - t*se
 ci_upper <- mean_y + t*se
 confident_interval <- c(ci_lower, ci_upper)
-confident_interval
-# the calculate above is wrong because the t value is wrong, need t value for 1 tail.
-ci <- t.test(y, conf.level = 0.90)
+
+ci <- t.test(y, conf.level = 0.90)$conf.int
 ci
 
 # 2
+# NuLL Hypotheses: The Average student IQ in this school is less or equal to the average 
+# IQ score (100) among all the school in the country
+# Alternative Hypothesis: The average student IQ in this school greater  than average
+# IQ score (100) among all the school in the country
+
+t <- (mean_y - 100) / se
+# t = -0.596 means the sample mean falls -0.596 below the hypothesized population mean
+# since it is a right tail test we set lower.tail = FALSE
+p_value <- pt(q=t, df = length(y)-1, lower.tail = FALSE)
+p_value
+
 
   
 #####################
