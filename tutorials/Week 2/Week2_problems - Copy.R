@@ -92,13 +92,23 @@ se_edu
 # 4. Visualization with ggplot2
 # -------------------------------#
 
-# Create histogram of income with mean line
-ggplot(df, aes(x=df$income))+
-  geom_histogram()
-# Create histogram of education with mean line
-ggplot(df, aes(x=df$edu))+
-  geom_histogram()
-# Create scatter plot: Income vs Education, colored by Capital
+# Histogram of income with mean line
+ggplot(df, aes(x = income)) +
+  geom_histogram(binwidth = 250, fill = "steelblue", color = "white") +
+  geom_vline(xintercept = mean_income, color = "red", linetype = "dashed", linewidth = 1) +
+  labs(title = "Distribution of Monthly Net Income",
+       x = "Monthly Net Income (Euro)", y = "Count") +
+  theme_minimal()
+
+# Histogram of education with mean line
+ggplot(df, aes(x = edu)) +
+  geom_histogram(binwidth = 1, fill = "darkgreen", color = "white") +
+  geom_vline(xintercept = mean_edu, color = "red", linetype = "dashed", linewidth = 1) +
+  labs(title = "Distribution of Education (Years)",
+       x = "Years of Education", y = "Count") +
+  theme_minimal()
+
+# Scatter plot: Income vs Education, colored by Capital
 ggplot(df, aes(x = income, y = edu, color = factor(cap))) +
   geom_point() +
   scale_color_manual(values = c("black", "red"), labels = c("Non-capital", "Capital")) +
@@ -112,9 +122,31 @@ ggplot(df, aes(x = income, y = edu, color = factor(cap))) +
 # 5. Confidence Intervals
 # -------------------------------#
 
-# Calculate 95% CI for income mean
+# 95% CI for income mean
+ci_95_lower <- mean_income - 1.96 * se_income
+ci_95_upper <- mean_income + 1.96 * se_income
 
-# Calculate 99% CI for income mean
+ci_95_lower
+mean_income
+ci_95_upper
+
+# 99% CI for income mean
+ci_99_lower <- mean_income - 2.576 * se_income
+ci_99_upper <- mean_income + 2.576 * se_income
+
+ci_99_lower
+mean_income
+ci_99_upper
+
+# Let's visualise this:
+ggplot(df, aes(x = income)) +
+  geom_histogram(binwidth = 250, fill = "steelblue", color = "white") +
+  geom_vline(xintercept = mean_income, color = "black", size = 1) +
+  geom_vline(xintercept = ci_95_lower, color = "black", linetype = "dashed") +
+  geom_vline(xintercept = ci_95_upper, color = "black", linetype = "dashed") +
+  labs(title = "Income Distribution with 95% Confidence Interval",
+       x = "Monthly Net Income (Euro)", y = "Count") +
+  theme_minimal()
 
 # --------------------------------------#
 # 6. Central Limit Theorem (CLT) Example
@@ -125,12 +157,20 @@ ggplot(df, aes(x = income, y = edu, color = factor(cap))) +
 # though the original pop. distribution isn't a crazy distribution
 
 set.seed(123)  # reproducibility
-sample_means_n50 <- data.frame("mean"=replicate(50, mean(sample(df$income, size = 500, replace = TRUE))), "n"=100)
+sample_means_n50 <- data.frame("mean"=replicate(50, mean(sample(df$income, size = 500, replace = TRUE))), "n"=50)
 sample_means_n1000 <- data.frame("mean"=replicate(1000, mean(sample(df$income, size = 500, replace = TRUE))), "n"=1000)
 sample_means_n10000 <- data.frame("mean"=replicate(10000, mean(sample(df$income, size = 500, replace = TRUE))), "n"=10000)
 
+#Edits
+sample_means_n5 <- data.frame("mean"=replicate(10000, mean(sample(df$income, size = 5, replace = TRUE))), "n"=5)
+sample_means_n50 <- data.frame("mean"=replicate(10000, mean(sample(df$income, size = 50, replace = TRUE))), "n"=50)
+sample_means_n500 <- data.frame("mean"=replicate(10000, mean(sample(df$income, size = 500, replace = TRUE))), "n"=500)
+
+
 # Combine sampling distributions
 df_clt <- rbind(sample_means_n50, sample_means_n1000, sample_means_n10000)
+df_clt <- rbind(sample_means_n5, sample_means_n50, sample_means_n500)
+
 
 ggplot(df_clt, aes(x = mean, fill = n)) +
   geom_histogram(bins = 30, alpha = 0.6, position = "identity") +
@@ -141,7 +181,14 @@ ggplot(df_clt, aes(x = mean, fill = n)) +
        x = "Sample Mean of Income", y = "Count") +
   theme_minimal() + guides(fill="none")
 
-# Interpretation: What do you notice about the differences in the sampling distributions?
+# Interpretation:
+# - With small n (5), distribution of sample means is wider and not perfectly normal.
+# - With larger n (50, 500), distribution of sample means becomes narrower
+#   and closer to normal, centered on the population mean.
+
+# We learned that the sampling distribution of the mean always 
+# approaches a normal distribution, regardless of the shape or size of the original
+# distribution!
 
 # Income, for example, is usually not really normally distributed.
 # First, we generate some hypothetical income data.
@@ -150,14 +197,78 @@ income <- rgamma(1000, shape = 1.1, scale = 2000)
 summary(income)
 var(income)
 
-# Let's have a look. Plot income variable you just created (using a histogram and density plot)
-# What shape is the population distribution?
+# Let's have a look.
+par(mfrow = c(1, 2)) # two plots side-by-side
+hist(income,
+     bty = "n",
+     las = 1,
+     border = "white",
+     col = viridis(2)[1]
+)
+
+plot(density(income),
+     bty = "n",
+     las = 1,
+     col = viridis(2)[2],
+     lwd = 2,
+     main = "Density of income"
+)
 
 
-# Now we want to get our sampling distribution of the mean again.
-# Create a sampling distribution of 50 draws from the population distribution
-# And plot the sampling distribution (again using a histogram and density plot)
-# What do you notice now?
+# This is clearly a non-normal distribution. Now we want to get our sampling 
+# distribution of the mean again.
 
-# Do the same thing, but with 500 draws from the population distribution?
-# Anything change?
+trial1 <- rep(NA, 100)
+
+for (i in 1:100){
+  trial1[i] <- mean(sample(income, 50))
+}
+
+hist(trial1 ,
+     bty = "n",
+     las = 1,
+     border = "white",
+     col = viridis(1),
+     xlim = c(1500, 3000),
+     main = "Distribution of sample means\n(# of samples = 50)"
+)
+
+plot(density(trial1),
+     bty = "n",
+     las = 1,
+     lwd = 2,
+     col = viridis(1),
+     xlim = c(1500, 3000),
+     main = "Density of sample means\n(# of samples = 50)"
+)
+
+mean(trial1)
+var(trial1)
+
+
+trial2 <- rep(NA, 100)
+
+for (i in 1:100){
+  trial2[i] <- mean(sample(income, 500)) #this time, we sample 500 times
+}
+
+hist(trial2,
+     bty = "n",
+     las = 1,
+     border = "white",
+     col = viridis(1),
+     xlim = c(1500, 3000),
+     main = "Distribution of sample means\n(# of samples = 500)"
+)
+
+plot(density(trial2),
+     bty = "n", 
+     las = 1,
+     lwd = 2,
+     col = viridis(1),090209
+     xlim = c(1500, 3000),
+     main = "Density of sample means\n(# of samples = 500)"
+)
+
+mean(trial2)
+var(trial2)

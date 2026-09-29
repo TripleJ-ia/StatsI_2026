@@ -34,46 +34,9 @@ lapply(c(),  pkgTest)
 #####################
 
 y <- c(105, 69, 86, 100, 82, 111, 104, 110, 87, 108, 87, 90, 94, 113, 112, 98, 80, 97, 95, 111, 114, 89, 95, 126, 98)
-
-# 1. Find a 90% confidence interval for the average student IQ in the school (As a hint, you
-# first need the mean and SD to create a CI):
-
-mean_iq <- mean(y)
-sd_iq <- sd(y)
-
-# at 90% Confidence interval, df = 25-1 = 24, t-statistic is 1.711 for two-tail probabilities.
-# first find standard error
-
-se <- sd_iq / sqrt(length(y))
-t <- 1.711
-ci_lower <- mean_iq - t*se
-ci_upper <- mean_iq + t*se
-confident_interval <- c(ci_lower, ci_upper)
-
-ci <- t.test(y, conf.level = 0.90)$conf.int
-ci
-
-# Next, the school counselor was curious whether the average student IQ in her school
-# is higher than the average IQ score (100) among all the schools in the country.
-# Using the same sample, conduct the appropriate hypothesis test with α = 0.05.
-
-# Null Hypotheses: The Average student IQ in this school is less or equal to the average 
-# IQ score (100) among all the school in the country
-# Alternative Hypothesis: The average student IQ in this school greater  than average
-# IQ score (100) among all the school in the country
-
-t <- (mean_iq - 100) / se
-# t = -0.596 means the sample mean falls -0.596 below the hypothesized population mean
-# since it is a right tail test we set lower.tail = FALSE
-p_value <- pt(q=t, df = length(y)-1, lower.tail = FALSE)
-p_value
-
-
   
 #####################
 # Problem 2
 #####################
 
 expenditure <- read.table("https://raw.githubusercontent.com/ASDS-TCD/StatsI_2026/main/datasets/expenditure.txt", header=T)
-summary(expenditure)
-head(expenditure)

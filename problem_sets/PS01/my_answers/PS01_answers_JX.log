@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.11)  22 SEP 2026 21:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.11)  22 SEP 2026 21:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./PS01_answersJZ.tex
-(PS01_answersJZ.tex
+**./PS01_answers_JX.tex
+(PS01_answers_JX.tex
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-08-10>
 (C:\Users\jiach\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -815,67 +815,41 @@ Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@dima=\skip66
 \bigstrutjot=\dimen315
 )
-(C:\Users\jiach\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
-Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
-
-(C:\Users\jiach\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
-Package: caption 2023/08/05 v3.6o Customizing captions (AR)
-
-(C:\Users\jiach\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
-Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen316
-\captionmargin=\dimen317
-\caption@leftmargin=\dimen318
-\caption@rightmargin=\dimen319
-\caption@width=\dimen320
-\caption@indent=\dimen321
-\caption@parindent=\dimen322
-\caption@hangindent=\dimen323
-Package caption Info: Standard document class detected.
-)
-\c@caption@flags=\count353
-\c@continuedfloat=\count354
-Package caption Info: float package is loaded.
-Package caption Info: hyperref package is loaded.
-)
-Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count355
-Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count356
-) (C:\Users\jiach\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count357
+(C:\Users\jiach\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count353
 \lst@gtempboxa=\box76
 \lst@token=\toks53
-\lst@length=\count358
-\lst@currlwidth=\dimen324
-\lst@column=\count359
-\lst@pos=\count360
-\lst@lostspace=\dimen325
-\lst@width=\dimen326
-\lst@newlines=\count361
-\lst@lineno=\count362
-\lst@maxwidth=\dimen327
+\lst@length=\count354
+\lst@currlwidth=\dimen316
+\lst@column=\count355
+\lst@pos=\count356
+\lst@lostspace=\dimen317
+\lst@width=\dimen318
+\lst@newlines=\count357
+\lst@lineno=\count358
+\lst@maxwidth=\dimen319
 
 (C:\Users\jiach\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
 File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
 )
 (C:\Users\jiach\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
-\c@lstnumber=\count363
-\lst@skipnumbers=\count364
+\c@lstnumber=\count359
+\lst@skipnumbers=\count360
 \lst@framebox=\box77
 )
 (C:\Users\jiach\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2025/11/14 1.11b listings configuration
 ))
 Package: listings 2025/11/14 1.11b (Carsten Heinz)
+\c@hyp=\count361
 
 (C:\Users\jiach\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\l3backend-pdft
 ex.def
 File: l3backend-pdftex.def 2026-08-10 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count365
-) (PS01_answersJZ.aux)
-\openout1 = `PS01_answersJZ.aux'.
+\l__color_backend_stack_int=\count362
+) (PS01_answers_JX.aux)
+\openout1 = `PS01_answers_JX.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
@@ -899,16 +873,16 @@ LaTeX Font Info:    ... okay on input line 67.
 (C:\Users\jiach\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count366
-\scratchdimen=\dimen328
+\scratchcounter=\count363
+\scratchdimen=\dimen320
 \scratchbox=\box78
-\nofMPsegments=\count367
-\nofMParguments=\count368
+\nofMPsegments=\count364
+\nofMParguments=\count365
 \everyMPshowfont=\toks54
-\MPscratchCnt=\count369
-\MPscratchDim=\dimen329
-\MPnumerator=\count370
-\makeMPintoPDFobject=\count371
+\MPscratchCnt=\count366
+\MPscratchDim=\dimen321
+\MPnumerator=\count367
+\makeMPintoPDFobject=\count368
 \everyMPtoPDFconversion=\toks55
 )
 (C:\Users\jiach\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -935,18 +909,11 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Package xypdf Info: Line width: 0.47998pt on input line 67.
 Package hyperref Info: Link coloring OFF on input line 67.
 
-(PS01_answersJZ.out) (PS01_answersJZ.out)
+(PS01_answers_JX.out) (PS01_answers_JX.out)
 \@outlinefile=\write7
-\openout7 = `PS01_answersJZ.out'.
+\openout7 = `PS01_answers_JX.out'.
 
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: listings package is loaded.
-Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count372
-
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
-
- []
+\c@lstlisting=\count369
 
 (C:\Users\jiach\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
@@ -958,84 +925,71 @@ File: lstlang2.sty 2025/11/14 1.11b listings language file
 File: lstlang3.sty 2025/11/14 1.11b listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 78.
+nput line 83.
 
-(PS01_answersJZ.R
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 4
-0.
-
-(C:\Users\jiach\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
+(PS01.R
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 3
+6.
+ (C:\Users\jiach\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
 File: omlcmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 40.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 36.
 )
-LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
-88.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 88.
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+
+ []
 
 
-LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 88.
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
-(PS01_answersJZ.R) [1
+ []
+
+[1
 
 {C:/Users/jiach/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<plot_example.pdf, id=24, 505.89pt x 505.89pt>
-File: plot_example.pdf Graphic file (type pdf)
-<use plot_example.pdf>
-Package pdftex.def Info: plot_example.pdf  used on input line 119.
-(pdftex.def)             Requested size: 352.31625pt x 352.32199pt.
- (PS01_answersJZ.R [2 <./plot_example.pdf>]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 6
-1.
+(PS01_answers_JX.R) (PS01_answers_JX.R) (PS01_answers_JX.R) (PS01_answers_JX.R)
 
-(C:\Users\jiach\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
-File: omscmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 61.
-)
-(regression_output1.tex) [3] (PS01_answersJZ.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
+
+ []
+
+[2] (PS01_answers_JX.R) (PS01_answers_JX.R) [3] (PS01.R) [4]
+(PS01_answers_JX.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-08-10>
  ***********
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-Package rerunfilecheck Info: File `PS01_answersJZ.out' has not changed.
+Package rerunfilecheck Info: File `PS01_answers_JX.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 28920 strings out of 467441
- 514325 string characters out of 5407591
- 1195872 words of memory out of 5000000
- 57710 multiletter control sequences out of 15000+600000
- 636344 words of font info for 76 fonts, out of 8000000 for 9000
+ 27510 strings out of 467441
+ 486878 string characters out of 5407591
+ 1134939 words of memory out of 5000000
+ 56300 multiletter control sequences out of 15000+600000
+ 636513 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 92i,9n,104p,3248b,2159s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 92i,6n,104p,3249b,2155s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\jiach\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-1000.pk><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmbx12.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmitt10.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jiach/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/jiach/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jiach/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/jiach/Ap
-pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/
-jiach/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:
-/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.
-pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmsy8.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmti12.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on PS01_answersJZ.pdf (3 pages, 168316 bytes).
+1000.pk> <C:\Users\jiach\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\tcrm1200.pk><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/jiach/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/jiach/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jiach/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/jiac
+h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Us
+ers/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb
+><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mr8.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmti12.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmtt12.pfb>
+Output written on PS01_answers_JX.pdf (4 pages, 161913 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 500000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
