@@ -157,20 +157,12 @@ ggplot(df, aes(x = income)) +
 # though the original pop. distribution isn't a crazy distribution
 
 set.seed(123)  # reproducibility
-sample_means_n50 <- data.frame("mean"=replicate(50, mean(sample(df$income, size = 500, replace = TRUE))), "n"=50)
+sample_means_n50 <- data.frame("mean"=replicate(50, mean(sample(df$income, size = 500, replace = TRUE))), "n"=100)
 sample_means_n1000 <- data.frame("mean"=replicate(1000, mean(sample(df$income, size = 500, replace = TRUE))), "n"=1000)
 sample_means_n10000 <- data.frame("mean"=replicate(10000, mean(sample(df$income, size = 500, replace = TRUE))), "n"=10000)
 
-#Edits
-sample_means_n5 <- data.frame("mean"=replicate(10000, mean(sample(df$income, size = 5, replace = TRUE))), "n"=5)
-sample_means_n50 <- data.frame("mean"=replicate(10000, mean(sample(df$income, size = 50, replace = TRUE))), "n"=50)
-sample_means_n500 <- data.frame("mean"=replicate(10000, mean(sample(df$income, size = 500, replace = TRUE))), "n"=500)
-
-
 # Combine sampling distributions
 df_clt <- rbind(sample_means_n50, sample_means_n1000, sample_means_n10000)
-df_clt <- rbind(sample_means_n5, sample_means_n50, sample_means_n500)
-
 
 ggplot(df_clt, aes(x = mean, fill = n)) +
   geom_histogram(bins = 30, alpha = 0.6, position = "identity") +
@@ -182,8 +174,8 @@ ggplot(df_clt, aes(x = mean, fill = n)) +
   theme_minimal() + guides(fill="none")
 
 # Interpretation:
-# - With small n (5), distribution of sample means is wider and not perfectly normal.
-# - With larger n (50, 500), distribution of sample means becomes narrower
+# - With small n (50), distribution of sample means is wider and not perfectly normal.
+# - With larger n (1000, 1000), distribution of sample means becomes narrower
 #   and closer to normal, centered on the population mean.
 
 # We learned that the sampling distribution of the mean always 
@@ -218,10 +210,10 @@ plot(density(income),
 # This is clearly a non-normal distribution. Now we want to get our sampling 
 # distribution of the mean again.
 
-trial1 <- rep(NA, 100)
+trial1 <- rep(NA, 50)
 
-for (i in 1:100){
-  trial1[i] <- mean(sample(income, 50))
+for (i in 1:50){
+  trial1[i] <- mean(sample(income, 100))
 }
 
 hist(trial1 ,
@@ -246,10 +238,10 @@ mean(trial1)
 var(trial1)
 
 
-trial2 <- rep(NA, 100)
+trial2 <- rep(NA, 500)
 
-for (i in 1:100){
-  trial2[i] <- mean(sample(income, 500)) #this time, we sample 500 times
+for (i in 1:500){
+  trial2[i] <- mean(sample(income, 100)) #this time, we sample 500 times
 }
 
 hist(trial2,
@@ -265,7 +257,7 @@ plot(density(trial2),
      bty = "n", 
      las = 1,
      lwd = 2,
-     col = viridis(1),090209
+     col = viridis(1),
      xlim = c(1500, 3000),
      main = "Density of sample means\n(# of samples = 500)"
 )

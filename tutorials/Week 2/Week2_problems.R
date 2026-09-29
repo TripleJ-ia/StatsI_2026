@@ -93,11 +93,9 @@ se_edu
 # -------------------------------#
 
 # Create histogram of income with mean line
-ggplot(df, aes(x=df$income))+
-  geom_histogram()
+
 # Create histogram of education with mean line
-ggplot(df, aes(x=df$edu))+
-  geom_histogram()
+
 # Create scatter plot: Income vs Education, colored by Capital
 ggplot(df, aes(x = income, y = edu, color = factor(cap))) +
   geom_point() +
