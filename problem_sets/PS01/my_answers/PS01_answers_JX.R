@@ -29,26 +29,26 @@ pkgTest <- function(pkg){
 
 lapply(c(),  pkgTest)
 
-#####################
+##########################################
 # Problem 1
-#####################
+##########################################
 
 y <- c(105, 69, 86, 100, 82, 111, 104, 110, 87, 108, 87, 90, 94, 113, 112, 98, 80, 97, 95, 111, 114, 89, 95, 126, 98)
 # 1
 # find mean and SD to create a CI
 mean_y <- mean(y)
 s_y <- sd(y)
-
-# at 90% Confidence interval, df = 25-1 = 24, t-statistic is 1.711 for two-tail probabilities.
-# first find standard error
 se <- s_y / sqrt(length(y))
-t <- 1.711
-ci_lower <- mean_y - t*se
-ci_upper <- mean_y + t*se
-confident_interval <- c(ci_lower, ci_upper)
+# Mean = 98.44
+# Standard Deviation = 13.0929
+# Standard Error = 2.6186
+# sample size is less than 30, use t-distribution
+t_score <- qt(0.95, df = length(y) - 1)
+# t_score = 1.711
+ci_lower <- mean_y - t_score*se
+ci_upper <- mean_y + t_score*se
+# 90% Confident Interval is (93.9599, 102.9201)
 
-ci <- t.test(y, conf.level = 0.90)$conf.int
-ci
 
 # 2
 # NuLL Hypotheses: The Average student IQ in this school is less or equal to the average 
@@ -57,10 +57,11 @@ ci
 # IQ score (100) among all the school in the country
 
 t <- (mean_y - 100) / se
-# t = -0.596 means the sample mean falls -0.596 below the hypothesized population mean
+# t = -0.596
+# it means the sample mean falls -0.596 below the hypothesized population mean
 # since it is a right tail test we set lower.tail = FALSE
 p_value <- pt(q=t, df = length(y)-1, lower.tail = FALSE)
-p_value
+# p_value = 0.7215
 
 
   
@@ -69,3 +70,114 @@ p_value
 #####################
 
 expenditure <- read.table("https://raw.githubusercontent.com/ASDS-TCD/StatsI_2026/main/datasets/expenditure.txt", header=T)
+head(expenditure)
+library(ggplot2)
+
+y_label <- "per capita expenditure on shelters/housing assistance"
+x1_label <- "Per capita expenditure on shelters"
+x2_label <- "Number of residents per 100,000 that are 'nancially insecure'"
+x3_label <- "Number of people per thousand residing in urban areas"
+
+# relationship betwwen y and x1
+p1 <- ggplot(expenditure, aes(x=X1, y=Y)) + 
+  geom_point() + 
+  labs(
+    title = "Relationship between Y and X1",
+    x = "Per capita expenditure on shelters",
+    y = "per capita expenditure on shelters/housing assistance"
+  )
+
+# relationship betwwen y and x2
+p2 <- ggplot(expenditure, aes(x=X2, y=Y)) + 
+  geom_point() + 
+  labs(
+    title = "Relationship between Y and X2",
+    x = x2_label,
+    y = y_label
+  )
+
+# relationship betwwen y and x3
+p3 <- ggplot(expenditure, aes(x=X3, y=Y)) + 
+  geom_point() + 
+  labs(
+    title = "Relationship between Y and X3",
+    x = x3_label,
+    y = y_label
+  )
+
+# relationship betwwen x1 and x2
+p4 <- ggplot(expenditure, aes(x=X1, y=X2)) + 
+  geom_point() + 
+  labs(
+    title = "Relationship between X1 and X2",
+    x = x1_label,
+    y = x2_label
+  )
+
+# relationship betwwen x1 and x3
+p5 <- ggplot(expenditure, aes(x=X1, y=X3)) + 
+  geom_point() + 
+  labs(
+    title = "Relationship between X1 and X3",
+    x = x1_label,
+    y = x3_label
+  )
+
+# relationship betwwen x2 and x3
+p6 <- ggplot(expenditure, aes(x=X2, y=X3)) + 
+  geom_point() + 
+  labs(
+    title = "Relationship between X2 and X3",
+    x = x1_label,
+    y = x3_label
+  )
+
+expenditure$Region <- factor(expenditure$Region,
+  levels = c(1, 2, 3, 4),
+  labels = c("Northeast", "North Central", "South", "West"))
+
+# relationship between Y and Region
+y_region_scatter <- ggplot(expenditure, aes(x=Region, y=Y)) + 
+  geom_point() + 
+  labs(
+    title = "Relationship between Y and Region",
+    x = "Region",
+    y = "per capita expenditure on shelters/housing assistance"
+  )
+ggsave("y_region_scatter.pdf", y_region_scatter, width = 6, height = 4)
+
+# Convert the numeric region into a labeled factor
+
+
+# Use Region as factor to plot box plot.
+y_region_box <- ggplot(expenditure, aes(x = Region, y = Y)) +
+  geom_boxplot() +
+  stat_summary(
+    fun = mean,
+    geom = "text",
+    aes(label = after_stat(round(y,4))),
+  ) +
+  labs(
+    title = "Per Capita Housing Assistance Expenditure by Region",
+    x = "Region",
+    y = "Per capita expenditure on housing assistance"
+  )
+y_region_box
+ggsave("y_region_box.pdf", y_region_box, width = 6, height = 4)
+
+
+# Convert the numeric region into a labeled factor
+
+# re creating above relationship between Y and X1, including one more variable Region
+ggplot(expenditure, aes(x=X1, y=Y,
+                              colour = Region)) + 
+  geom_point() + 
+  labs(
+    title = "Relationship between Y and X1",
+    x = "Per capita expenditure on shelters",
+    y = "per capita expenditure on shelters/housing assistance",
+    subtitle = "By region",
+  )
+
+
+
