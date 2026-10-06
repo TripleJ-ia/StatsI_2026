@@ -156,6 +156,27 @@ Please plot the relationships among \emph{Y}, \emph{X1}, \emph{X2}, and \emph{X3
 \begin{doublespace}
 	\textbf{Answer:}\\
 	First, plot scatter plot to show the relationship between \emph{Y}(per capita expenditure on shelters/housing assistance in state) and \emph{X1}(per capita personal income in state).
+	\lstinputlisting[language=R, firstline=81, lastline=89 ]{PS01_answers_JX.R}
+	\includegraphics[width=0.6\textwidth]{x1_y_scatter.pdf}\\
+	From this graph, I can see there is a \textbf{positive}, \textbf{strong} and \textbf{linear} association between \emph{X1} and \emph{Y}. 
+	
+	Similarly, I can plot scatter graph for \emph{X2} and \emph{Y}, \emph{X3} and \emph{Y}, \emph{X1} and \emph{X2}, \emph{X1} and \emph{X3}, \emph{X2} and \emph{X3}.\\
+	
+	\includegraphics[width=0.6\textwidth]{x2_y_scatter.pdf}\\
+	From this graph, there is a \textbf{nonlinear} association between \emph{X2} and \emph{Y}\\
+	
+	\includegraphics[width=0.6\textwidth]{x3_y_scatter.pdf}\\
+	From this graph, there is a \textbf{positive}, \textbf{strong} and \textbf{linear} association between \emph{X3} and \emph{Y}, with some outliers when \emph{X3}(the number of people per thousand residing in urban ares) is around 900.\\
+	
+	\includegraphics[width=0.6\textwidth]{x1_x2_scatter.pdf}\\
+	From this graph, there is a \textbf{positive}, \textbf{weak} and \textbf{linear} association between \emph{X1} and \emph{X2}.\\
+	
+	\includegraphics[width=0.6\textwidth]{x1_x3_scatter.pdf}\\
+	From this graph, there is a \textbf{positive}, \textbf{strong} and \textbf{linear} association between \emph{X1} and \emph{X3}, with one outlier when \emph{X1}(per capita personal income) is around 2750 \\
+	
+	\includegraphics[width=0.6\textwidth]{x2_x3_scatter.pdf}\\
+	From this graph, there is \textbf{no correlation} between \emph{X2} and \emph{X3}.\\
+	
 \end{doublespace}
 
 \item
@@ -163,27 +184,26 @@ Please plot the relationship between \emph{Y} and \emph{Region}? On average, whi
 \begin{doublespace}
 	\textbf{Answer:}\\
 	To make the number from Region easier to be understood. I can change Region to factor with label names of Northeast, North Central, South and West.
-	\lstinputlisting[language=R, firstline=135, lastline=137 ]{PS01_answers_JX.R}
-	
+	\lstinputlisting[language=R, firstline=142, lastline=144 ]{PS01_answers_JX.R}
+
 	Then create scatter plot.
-	\lstinputlisting[language=R, firstline=139, lastline=146 ]{PS01_answers_JX.R}
+	\lstinputlisting[language=R, firstline=146, lastline=154 ]{PS01_answers_JX.R}
 	\includegraphics[width=0.6\textwidth]{y_region_scatter.pdf}\\
 	
 	To find the average, I can use box plot to compare the mean per capita expenditure among different region.
-	\lstinputlisting[language=R, firstline=153, lastline=164 ]{PS01_answers_JX.R}
-	\includegraphics[width=0.6\textwidth]{y_region_box.pdf}\\
+	\lstinputlisting[language=R, firstline=159, lastline=173 ]{PS01_answers_JX.R}
+	\includegraphics[width=0.8\textwidth]{y_region_box.pdf}
 	
-	On average, US states that are categorized as "West" has the highest per capita expenditure on housing assistance. With 88.3077.
+	On average, US states that are categorized as 4(West) has the highest per capita expenditure (88.3077) on housing assistance.
 	
 \end{doublespace}
 \vspace{.5cm}
 \item
 Please plot the relationship between \emph{Y} and \emph{X1}? Describe this graph and the relationship. Reproduce the above graph including one more variable \emph{Region} and display different regions with different types of symbols and colors. \\
 \begin{doublespace}
-	\textbf{Answer:}\\
-	\lstinputlisting[language=R, firstline=81, lastline=88 ]{PS01_answers_JX.R}
-	\includegraphics[width=0.8\textwidth]{Y_X1.pdf}
-	In the above graph, Y and X1 have a positive, weak, and linear association.
+	\textbf{Answer:}
+	\lstinputlisting[language=R, firstline=176, lastline=185 ]{PS01_answers_JX.R}
+	\includegraphics[width=0.9\textwidth]{y_x1_region.pdf}
 	
 \end{doublespace}
 \end{itemize}

@@ -74,67 +74,74 @@ head(expenditure)
 library(ggplot2)
 
 y_label <- "per capita expenditure on shelters/housing assistance"
-x1_label <- "Per capita expenditure on shelters"
-x2_label <- "Number of residents per 100,000 that are 'nancially insecure'"
+x1_label <- "per capita personal income"
+x2_label <- "Number of residents per 100,000 that are 'financially insecure'"
 x3_label <- "Number of people per thousand residing in urban areas"
 
-# relationship betwwen y and x1
-p1 <- ggplot(expenditure, aes(x=X1, y=Y)) + 
+# plot relationship between y and x1 using scatter plot
+x1_y_scatter <- ggplot(expenditure, aes(x=X1, y=Y)) + 
   geom_point() + 
   labs(
-    title = "Relationship between Y and X1",
-    x = "Per capita expenditure on shelters",
+    title = "Relationship between X1 and Y",
+    x = "per capita personal income",
     y = "per capita expenditure on shelters/housing assistance"
   )
+ggsave("x1_y_scatter.pdf", x1_y_scatter, width = 6, height = 4)
 
-# relationship betwwen y and x2
-p2 <- ggplot(expenditure, aes(x=X2, y=Y)) + 
+# relationship between y and x2
+x2_y_scatter <- ggplot(expenditure, aes(x=X2, y=Y)) + 
   geom_point() + 
   labs(
-    title = "Relationship between Y and X2",
+    title = "Relationship between X2 and Y",
     x = x2_label,
     y = y_label
   )
+ggsave("x2_y_scatter.pdf", x2_y_scatter, width = 6, height = 4)
 
-# relationship betwwen y and x3
-p3 <- ggplot(expenditure, aes(x=X3, y=Y)) + 
+# relationship between y and x3
+x3_y_scatter <- ggplot(expenditure, aes(x=X3, y=Y)) + 
   geom_point() + 
   labs(
-    title = "Relationship between Y and X3",
+    title = "Relationship between X3 and Y",
     x = x3_label,
     y = y_label
   )
+ggsave("x3_y_scatter.pdf", x3_y_scatter, width = 6, height = 4)
 
-# relationship betwwen x1 and x2
-p4 <- ggplot(expenditure, aes(x=X1, y=X2)) + 
+# relationship between x1 and x2
+x1_x2_scatter <- ggplot(expenditure, aes(x=X1, y=X2)) + 
   geom_point() + 
   labs(
     title = "Relationship between X1 and X2",
     x = x1_label,
     y = x2_label
   )
+ggsave("x1_x2_scatter.pdf", x1_x2_scatter, width = 6, height = 4)
 
-# relationship betwwen x1 and x3
-p5 <- ggplot(expenditure, aes(x=X1, y=X3)) + 
+# relationship between x1 and x3
+x1_x3_scatter <- ggplot(expenditure, aes(x=X1, y=X3)) + 
   geom_point() + 
   labs(
     title = "Relationship between X1 and X3",
     x = x1_label,
     y = x3_label
   )
+ggsave("x1_x3_scatter.pdf", x1_x3_scatter, width = 6, height = 4)
 
-# relationship betwwen x2 and x3
-p6 <- ggplot(expenditure, aes(x=X2, y=X3)) + 
+# relationship between x2 and x3
+x2_x3_scatter <- ggplot(expenditure, aes(x=X2, y=X3)) + 
   geom_point() + 
   labs(
     title = "Relationship between X2 and X3",
-    x = x1_label,
+    x = x2_label,
     y = x3_label
   )
+ggsave("x2_x3_scatter.pdf", x2_x3_scatter, width = 6, height = 4)
+#################################################################################
 
 expenditure$Region <- factor(expenditure$Region,
   levels = c(1, 2, 3, 4),
-  labels = c("Northeast", "North Central", "South", "West"))
+  labels = c("Northeast (1)", "North Central (2)", "South (3)", "West (4)"))
 
 # relationship between Y and Region
 y_region_scatter <- ggplot(expenditure, aes(x=Region, y=Y)) + 
@@ -162,16 +169,14 @@ y_region_box <- ggplot(expenditure, aes(x = Region, y = Y)) +
     x = "Region",
     y = "Per capita expenditure on housing assistance"
   )
-y_region_box
+
 ggsave("y_region_box.pdf", y_region_box, width = 6, height = 4)
+###################################################################################### 
 
-
-# Convert the numeric region into a labeled factor
-
-# re creating above relationship between Y and X1, including one more variable Region
-ggplot(expenditure, aes(x=X1, y=Y,
-                              colour = Region)) + 
-  geom_point() + 
+# re-creating above relationship between Y and X1, including one more variable Region
+y_x1_region <- ggplot(expenditure, aes(x=X1, y=Y,
+                              colour = Region, shape = Region)) + 
+  geom_point(size = 3) + 
   labs(
     title = "Relationship between Y and X1",
     x = "Per capita expenditure on shelters",
@@ -179,5 +184,6 @@ ggplot(expenditure, aes(x=X1, y=Y,
     subtitle = "By region",
   )
 
+ggsave("y_x1_region.pdf", y_x1_region, width = 6, height = 4)
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.11)  2 OCT 2026 23:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.11)  6 OCT 2026 18:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -955,41 +955,95 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--114
  []
 
 [2] (PS01_answers_JX.R) (PS01_answers_JX.R) [3] (PS01_answers_JX.R)
-(PS01_answers_JX.R) [4] (PS01_answers_JX.R)
-<y_region_scatter.pdf, id=66, 433.62pt x 289.08pt>
+(PS01_answers_JX.R)
+<x1_y_scatter.pdf, id=56, 433.62pt x 289.08pt>
+File: x1_y_scatter.pdf Graphic file (type pdf)
+<use x1_y_scatter.pdf>
+Package pdftex.def Info: x1_y_scatter.pdf  used on input line 160.
+(pdftex.def)             Requested size: 281.85587pt x 187.913pt.
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
+
+ []
+
+<x2_y_scatter.pdf, id=74, 433.62pt x 289.08pt>
+File: x2_y_scatter.pdf Graphic file (type pdf)
+<use x2_y_scatter.pdf>
+Package pdftex.def Info: x2_y_scatter.pdf  used on input line 165.
+(pdftex.def)             Requested size: 281.85587pt x 187.913pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--167
+
+ []
+
+<x3_y_scatter.pdf, id=75, 433.62pt x 289.08pt>
+File: x3_y_scatter.pdf Graphic file (type pdf)
+<use x3_y_scatter.pdf>
+Package pdftex.def Info: x3_y_scatter.pdf  used on input line 168.
+(pdftex.def)             Requested size: 281.85587pt x 187.913pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 168--170
+
+ []
+
+[5 <./x1_y_scatter.pdf> <./x2_y_scatter.pdf>]
+<x1_x2_scatter.pdf, id=90, 433.62pt x 289.08pt>
+File: x1_x2_scatter.pdf Graphic file (type pdf)
+<use x1_x2_scatter.pdf>
+Package pdftex.def Info: x1_x2_scatter.pdf  used on input line 171.
+(pdftex.def)             Requested size: 281.85587pt x 187.913pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 171--173
+
+ []
+
+<x1_x3_scatter.pdf, id=91, 433.62pt x 289.08pt>
+File: x1_x3_scatter.pdf Graphic file (type pdf)
+<use x1_x3_scatter.pdf>
+Package pdftex.def Info: x1_x3_scatter.pdf  used on input line 174.
+(pdftex.def)             Requested size: 281.85587pt x 187.913pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 174--176
+
+ []
+
+[6 <./x3_y_scatter.pdf> <./x1_x2_scatter.pdf>]
+<x2_x3_scatter.pdf, id=106, 433.62pt x 289.08pt>
+File: x2_x3_scatter.pdf Graphic file (type pdf)
+<use x2_x3_scatter.pdf>
+Package pdftex.def Info: x2_x3_scatter.pdf  used on input line 177.
+(pdftex.def)             Requested size: 281.85587pt x 187.913pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--179
+
+ []
+
+[7 <./x1_x3_scatter.pdf> <./x2_x3_scatter.pdf>] (PS01_answers_JX.R)
+(PS01_answers_JX.R)
+<y_region_scatter.pdf, id=122, 433.62pt x 289.08pt>
 File: y_region_scatter.pdf Graphic file (type pdf)
 <use y_region_scatter.pdf>
-Package pdftex.def Info: y_region_scatter.pdf  used on input line 170.
+Package pdftex.def Info: y_region_scatter.pdf  used on input line 191.
 (pdftex.def)             Requested size: 281.85587pt x 187.913pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--171
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
 
  []
 
-(PS01_answers_JX.R [5 <./y_region_scatter.pdf>])
-<y_region_box.pdf, id=93, 433.62pt x 289.08pt>
+(PS01_answers_JX.R [8 <./y_region_scatter.pdf>])
+<y_region_box.pdf, id=146, 433.62pt x 289.08pt>
 File: y_region_box.pdf Graphic file (type pdf)
 <use y_region_box.pdf>
-Package pdftex.def Info: y_region_box.pdf  used on input line 174.
-(pdftex.def)             Requested size: 281.85587pt x 187.913pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 174--175
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--184
-
- []
-
-(PS01_answers_JX.R [6 <./y_region_box.pdf>])
-<Y_X1.pdf, id=113, 433.62pt x 289.08pt>
-File: Y_X1.pdf Graphic file (type pdf)
-<use Y_X1.pdf>
-Package pdftex.def Info: Y_X1.pdf  used on input line 185.
+Package pdftex.def Info: y_region_box.pdf  used on input line 195.
 (pdftex.def)             Requested size: 375.80544pt x 250.5492pt.
- [7 <./Y_X1.pdf>]
-(PS01_answers_JX.aux)
+ [9 <./y_region_box.pdf>]
+(PS01_answers_JX.R)
+<y_x1_region.pdf, id=172, 433.62pt x 289.08pt>
+File: y_x1_region.pdf Graphic file (type pdf)
+<use y_x1_region.pdf>
+Package pdftex.def Info: y_x1_region.pdf  used on input line 206.
+(pdftex.def)             Requested size: 422.77664pt x 281.8673pt.
+ [10 <./y_x1_region.pdf>] (PS01_answers_JX.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-08-10>
@@ -998,10 +1052,10 @@ Package rerunfilecheck Info: File `PS01_answers_JX.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 27584 strings out of 467441
- 488400 string characters out of 5407591
- 1189950 words of memory out of 5000000
- 56328 multiletter control sequences out of 15000+600000
+ 27654 strings out of 467441
+ 490026 string characters out of 5407591
+ 1181952 words of memory out of 5000000
+ 56377 multiletter control sequences out of 15000+600000
  636513 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,6n,104p,3249b,2248s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1021,9 +1075,9 @@ mr8.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmti12.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmtt12.pfb>
-Output written on PS01_answers_JX.pdf (7 pages, 197071 bytes).
+Output written on PS01_answers_JX.pdf (10 pages, 248756 bytes).
 PDF statistics:
- 205 PDF objects out of 1000 (max. 8388607)
- 69 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 273 PDF objects out of 1000 (max. 8388607)
+ 88 named destinations out of 1000 (max. 500000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
 
