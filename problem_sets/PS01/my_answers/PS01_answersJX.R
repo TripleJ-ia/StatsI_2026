@@ -73,18 +73,18 @@ expenditure <- read.table("https://raw.githubusercontent.com/ASDS-TCD/StatsI_202
 head(expenditure)
 library(ggplot2)
 
-y_label <- "per capita expenditure on shelters/housing assistance"
-x1_label <- "per capita personal income"
-x2_label <- "Number of residents per 100,000 that are 'financially insecure'"
-x3_label <- "Number of people per thousand residing in urban areas"
+y_label <- "(Y) per capita expenditure on shelters/housing assistance"
+x1_label <- "(X1) per capita personal income"
+x2_label <- "(X2) Number of residents per 100,000 that are 'financially insecure'"
+x3_label <- "(X3) Number of people per thousand residing in urban areas"
 
 # plot relationship between y and x1 using scatter plot
 x1_y_scatter <- ggplot(expenditure, aes(x=X1, y=Y)) + 
   geom_point() + 
   labs(
     title = "Relationship between X1 and Y",
-    x = "per capita personal income",
-    y = "per capita expenditure on shelters/housing assistance"
+    x = "(X1) per capita personal income",
+    y = "(Y) per capita expenditure on shelters/housing assistance"
   )
 ggsave("x1_y_scatter.pdf", x1_y_scatter, width = 6, height = 4)
 
@@ -149,7 +149,7 @@ y_region_scatter <- ggplot(expenditure, aes(x=Region, y=Y)) +
   labs(
     title = "Relationship between Y and Region",
     x = "Region",
-    y = "per capita expenditure on shelters/housing assistance"
+    y = "(Y) per capita expenditure on shelters/housing assistance"
   )
 ggsave("y_region_scatter.pdf", y_region_scatter, width = 6, height = 4)
 
@@ -167,7 +167,7 @@ y_region_box <- ggplot(expenditure, aes(x = Region, y = Y)) +
   labs(
     title = "Per Capita Housing Assistance Expenditure by Region",
     x = "Region",
-    y = "Per capita expenditure on housing assistance"
+    y = "(Y) per capita expenditure on shelters/housing assistance"
   )
 
 ggsave("y_region_box.pdf", y_region_box, width = 6, height = 4)
@@ -176,14 +176,16 @@ ggsave("y_region_box.pdf", y_region_box, width = 6, height = 4)
 # re-creating above relationship between Y and X1, including one more variable Region
 y_x1_region <- ggplot(expenditure, aes(x=X1, y=Y,
                               colour = Region, shape = Region)) + 
-  geom_point(size = 3) + 
+  geom_point(size = 2) + 
   labs(
-    title = "Relationship between Y and X1",
-    x = "Per capita expenditure on shelters",
-    y = "per capita expenditure on shelters/housing assistance",
+    title = "Relationship between Y, X1 and Region",
+    x = "(X1) Per capita expenditure on shelters",
+    y = "(Y) per capita expenditure on shelters/housing assistance",
     subtitle = "By region",
   )
 
 ggsave("y_x1_region.pdf", y_x1_region, width = 6, height = 4)
 
-
+pdf("Histogram_of_sample_y.pdf")
+hist(x=y, xlab = "IQ")
+dev.off()

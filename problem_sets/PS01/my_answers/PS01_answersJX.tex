@@ -80,7 +80,7 @@
 A school counselor was curious about the average of IQ of the students in her school and took a random sample of 25 students' IQ scores. The following is the data set:\\
 \vspace{.5cm}
 
-\lstinputlisting[language=R, firstline=36, lastline=36]{PS01_answers_JX.R}  
+\lstinputlisting[language=R, firstline=36, lastline=36]{PS01_answersJX.R}  
 
 
 \vspace{1cm}
@@ -92,13 +92,13 @@ A school counselor was curious about the average of IQ of the students in her sc
 	\begin{doublespace}
 	\textbf{Answer:}\\
 	Find mean, standard deviation and standard error in R.
-	\lstinputlisting[language=R, firstline=39, lastline=44]{PS01_answers_JX.R}
+	\lstinputlisting[language=R, firstline=39, lastline=44]{PS01_answersJX.R}
 	
 	Sample size is less than 30, use t-distribution.
-	\lstinputlisting[language=R, firstline=46, lastline=47]{PS01_answers_JX.R}
+	\lstinputlisting[language=R, firstline=46, lastline=47]{PS01_answersJX.R}
 	In above function $qt()$, the argument $p$ = 1 - 0.1/2 = 0.95
 	
-	\lstinputlisting[language=R, firstline=48, lastline=51]{PS01_answers_JX.R}
+	\lstinputlisting[language=R, firstline=48, lastline=51]{PS01_answersJX.R}
 	\end{doublespace}
 
 	\item Next, the school counselor was curious  whether  the average student IQ in her school is higher than the average IQ score (100) among all the schools in the country.\\ 
@@ -108,6 +108,8 @@ A school counselor was curious about the average of IQ of the students in her sc
 	\begin{doublespace}
 		\textbf{Answer:}\\
 		\textbf{Assumption}: data is randomly selected and the population is normally distributed.
+		\includegraphics[width=0.6\textwidth]{Histogram_of_sample_y.pdf}\\
+		
 		\textbf{Hypothesis}:\\
 		$H_0: \mu \leq 100$\\
 		$H_A: \mu > 100$\\
@@ -116,10 +118,10 @@ A school counselor was curious about the average of IQ of the students in her sc
 		Since the sample size is small we use t-score to calculate test statistic:
 		$$t = \frac{\bar{y} - \mu_0}{\sigma_{\bar{y}}}$$
 		We can find $t$ in R.
-		\lstinputlisting[language=R, firstline=59, lastline=60]{PS01_answers_JX.R}
+		\lstinputlisting[language=R, firstline=59, lastline=60]{PS01_answersJX.R}
 		
 		\textbf{Calculate P-value in R:}
-		\lstinputlisting[language=R, firstline=63, lastline=64]{PS01_answers_JX.R}
+		\lstinputlisting[language=R, firstline=63, lastline=64]{PS01_answersJX.R}
 		
 		\textbf{Conclusion}:\\
 		Since P-value $>\alpha(0.05)$, we fail to reject the null hypothesis. There is insufficient evidence to conclude that the average student IQ in this school is greater than the average IQ score of 100 among all schools in the country.
@@ -146,7 +148,7 @@ A school counselor was curious about the average of IQ of the students in her sc
 \vspace{.5cm}
 \noindent Explore the \texttt{expenditure} data set and import data into \texttt{R}.
 \vspace{.5cm}
-\lstinputlisting[language=R, firstline=72, lastline=72]{PS01_answers_JX.R}  
+\lstinputlisting[language=R, firstline=72, lastline=72]{PS01_answersJX.R}  
 \vspace{.5cm}
 \begin{itemize}
 
@@ -156,9 +158,9 @@ Please plot the relationships among \emph{Y}, \emph{X1}, \emph{X2}, and \emph{X3
 \begin{doublespace}
 	\textbf{Answer:}\\
 	First, plot scatter plot to show the relationship between \emph{Y}(per capita expenditure on shelters/housing assistance in state) and \emph{X1}(per capita personal income in state).
-	\lstinputlisting[language=R, firstline=81, lastline=89 ]{PS01_answers_JX.R}
+	\lstinputlisting[language=R, firstline=81, lastline=89 ]{PS01_answersJX.R}
 	\includegraphics[width=0.6\textwidth]{x1_y_scatter.pdf}\\
-	From this graph, I can see there is a \textbf{positive}, \textbf{strong} and \textbf{linear} association between \emph{X1} and \emph{Y}. 
+	From this graph, I can see there is a \textbf{positive}, \textbf{strong} and \textbf{linear} association between \emph{X1} and \emph{Y}. When X1 increases, Y increases.
 	
 	Similarly, I can plot scatter graph for \emph{X2} and \emph{Y}, \emph{X3} and \emph{Y}, \emph{X1} and \emph{X2}, \emph{X1} and \emph{X3}, \emph{X2} and \emph{X3}.\\
 	
@@ -175,7 +177,7 @@ Please plot the relationships among \emph{Y}, \emph{X1}, \emph{X2}, and \emph{X3
 	From this graph, there is a \textbf{positive}, \textbf{strong} and \textbf{linear} association between \emph{X1} and \emph{X3}, with one outlier when \emph{X1}(per capita personal income) is around 2750 \\
 	
 	\includegraphics[width=0.6\textwidth]{x2_x3_scatter.pdf}\\
-	From this graph, there is \textbf{no correlation} between \emph{X2} and \emph{X3}.\\
+	From this graph, there is \textbf{positive, weak association} between \emph{X2} and \emph{X3}.\\
 	
 \end{doublespace}
 
@@ -184,14 +186,14 @@ Please plot the relationship between \emph{Y} and \emph{Region}? On average, whi
 \begin{doublespace}
 	\textbf{Answer:}\\
 	To make the number from Region easier to be understood. I can change Region to factor with label names of Northeast, North Central, South and West.
-	\lstinputlisting[language=R, firstline=142, lastline=144 ]{PS01_answers_JX.R}
+	\lstinputlisting[language=R, firstline=142, lastline=144 ]{PS01_answersJX.R}
 
 	Then create scatter plot.
-	\lstinputlisting[language=R, firstline=146, lastline=154 ]{PS01_answers_JX.R}
+	\lstinputlisting[language=R, firstline=146, lastline=154 ]{PS01_answersJX.R}
 	\includegraphics[width=0.6\textwidth]{y_region_scatter.pdf}\\
 	
 	To find the average, I can use box plot to compare the mean per capita expenditure among different region.
-	\lstinputlisting[language=R, firstline=159, lastline=173 ]{PS01_answers_JX.R}
+	\lstinputlisting[language=R, firstline=159, lastline=173 ]{PS01_answersJX.R}
 	\includegraphics[width=0.8\textwidth]{y_region_box.pdf}
 	
 	On average, US states that are categorized as 4(West) has the highest per capita expenditure (88.3077) on housing assistance.
@@ -201,9 +203,12 @@ Please plot the relationship between \emph{Y} and \emph{Region}? On average, whi
 \item
 Please plot the relationship between \emph{Y} and \emph{X1}? Describe this graph and the relationship. Reproduce the above graph including one more variable \emph{Region} and display different regions with different types of symbols and colors. \\
 \begin{doublespace}
-	\textbf{Answer:}
-	\lstinputlisting[language=R, firstline=176, lastline=185 ]{PS01_answers_JX.R}
-	\includegraphics[width=0.9\textwidth]{y_x1_region.pdf}
+	\textbf{Answer:}\\
+	\includegraphics[width=0.6\textwidth]{x1_y_scatter.pdf}\\
+	In this graph, Y and X1 have a strong, positive and linear relationship, as Y increases, X1 increases as well.
+	\lstinputlisting[language=R, firstline=176, lastline=185 ]{PS01_answersJX.R}
+	\includegraphics[width=0.9\textwidth]{y_x1_region.pdf}\\
+	South region is clustered mostly in the low Y and low X1, Northeast region is clustered in the high Y and high X1. The North Central and West regions are clustered in the middle Y and X1 area.
 	
 \end{doublespace}
 \end{itemize}
