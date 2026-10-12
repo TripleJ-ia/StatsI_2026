@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.11)  10 OCT 2026 12:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.11)  10 OCT 2026 14:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -848,8 +848,7 @@ Package: listings 2025/11/14 1.11b (Carsten Heinz)
 ex.def
 File: l3backend-pdftex.def 2026-08-10 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count362
-)
-No file PS02.aux.
+) (PS02.aux)
 \openout1 = `PS02.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
@@ -909,79 +908,38 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Package xypdf Info: Line width: 0.47998pt on input line 67.
 Package hyperref Info: Link coloring OFF on input line 67.
+
+(PS02.out) (PS02.out)
 \@outlinefile=\write7
 \openout7 = `PS02.out'.
 
 \c@lstlisting=\count369
-
-[1
+ [1
 
 {C:/Users/jiach/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
  []
 
 [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
-
-LaTeX Warning: Reference `fig:women_desc' on page 4 undefined on input line 132
-.
-
-
-LaTeX Warning: File `../../../../graphics/women_desc.png' not found on input li
-ne 139.
-
-
-! Package pdftex.def Error: File `../../../../graphics/women_desc.png' not foun
-d: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.139 ...dth]{../../../../graphics/women_desc.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Overfull \hbox (46.97836pt too wide) in paragraph at lines 139--140
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[4] [5] [6] (PS02.aux)
+[4] [5] (PS02.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-08-10>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `PS02.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `PS02.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `PS02.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26483 strings out of 467441
- 475909 string characters out of 5407591
- 905509 words of memory out of 5000000
- 55325 multiletter control sequences out of 15000+600000
- 637876 words of font info for 83 fonts, out of 8000000 for 9000
+ 26461 strings out of 467441
+ 474936 string characters out of 5407591
+ 905650 words of memory out of 5000000
+ 55298 multiletter control sequences out of 15000+600000
+ 637569 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  92i,7n,104p,3238b,540s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\jiach\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
@@ -997,9 +955,9 @@ ch/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Us
 ers/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.p
 fb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmtt12.pfb>
-Output written on PS02.pdf (6 pages, 136123 bytes).
+Output written on PS02.pdf (5 pages, 135051 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 11 named destinations out of 1000 (max. 500000)
+ 96 PDF objects out of 1000 (max. 8388607)
+ 10 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
