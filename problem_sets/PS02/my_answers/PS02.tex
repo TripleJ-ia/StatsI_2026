@@ -97,16 +97,20 @@
 	
 	\item [(a)]
 	Calculate the $\chi^2$ test statistic by hand/manually (even better if you can do "by hand" in \texttt{R}).\\
-	\vspace{7cm}
+
 	\begin{doublespace}
-		H0: Class and Traffic stop result are independent.
-		H1: Class and Traffic stop result are dependent.
-		
-		
+		\lstinputlisting[language=R, firstline=5, lastline=21]{PS02.R}
 	\end{doublespace}
-	
+	\newpage
 	\item [(b)]
 	Now calculate the p-value from the test statistic you just created (in \texttt{R}).\footnote{Remember frequency should be $>$ 5 for all cells, but let's calculate the p-value here anyway.}  What do you conclude if $\alpha = 0.1$?\\
+	\begin{doublespace}
+		\lstinputlisting[language=R, firstline=24, lastline=26]{PS02.R}
+		$H_0$: Driver's class and the police interaction are independent.
+		$H_a$: Driver's class and the police interaction are dependent.
+		Since p-value $>$ $\alpha$, we fail to reject $H_0$, there is not sufficient evidence to conclude that the drivers' class and the police interaction are dependent.
+		
+	\end{doublespace}
 	
 	\newpage
 	\item [(c)] Calculate the standardized residuals for each cell and put them in the table below.
@@ -118,11 +122,12 @@
 			& Not Stopped & Bribe requested & Stopped/given warning \\
 			\\[-1.8ex] 
 			\hline \\[-1.8ex]
-			Upper class  &  &  &  \\
+			Upper class  & 0.3220306 & -1.641957 & 1.523026 \\
 			\\
-			Lower class &  &   &   \\
-			
+			Lower class & -0.3220306 & 1.641957  & -1.523026 \\
+			\hline
 		\end{tabular}
+		\lstinputlisting[language=R, firstline=28, lastline=59]{PS02.R}
 	\end{table}
 	
 	

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.11)  10 OCT 2026 14:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.11)  12 OCT 2026 23:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -917,16 +917,49 @@ Package hyperref Info: Link coloring OFF on input line 67.
  [1
 
 {C:/Users/jiach/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 106--107
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
 
  []
 
-[2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 133--134
+(C:\Users\jiach\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+)
+(C:\Users\jiach\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
+File: lstlang2.sty 2025/11/14 1.11b listings language file
+)
+(C:\Users\jiach\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
+File: lstlang3.sty 2025/11/14 1.11b listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 102.
+
+(PS02.R
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 5
+.
+ (C:\Users\jiach\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
+File: omlcmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 5.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
+5.
+(C:\Users\jiach\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
+File: omscmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
+)
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 106--108
 
  []
 
-[4] [5] (PS02.aux)
+(PS02.R) [3] (PS02.R) [4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 141--142
+
+ []
+
+[6] [7] (PS02.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-08-10>
@@ -935,29 +968,33 @@ Package rerunfilecheck Info: File `PS02.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26461 strings out of 467441
- 474936 string characters out of 5407591
- 905650 words of memory out of 5000000
- 55298 multiletter control sequences out of 15000+600000
- 637569 words of font info for 82 fonts, out of 8000000 for 9000
+ 27582 strings out of 467441
+ 487230 string characters out of 5407591
+ 1306512 words of memory out of 5000000
+ 56339 multiletter control sequences out of 15000+600000
+ 637904 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 92i,7n,104p,3238b,540s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 92i,7n,104p,3238b,2266s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\jiach\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
-1200.pk><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmbx12.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmmi10.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmmi12.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jiach/AppData/Local/Progra
-ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/jiach/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/jiach/AppD
-ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/jia
-ch/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Us
-ers/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.p
-fb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmtt12.pfb>
-Output written on PS02.pdf (5 pages, 135051 bytes).
+1000.pk> <C:\Users\jiach\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\tcrm1200.pk><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/jiach/AppData/Local/Programs
+/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/jiach/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jiach/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/jiac
+h/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Us
+ers/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb
+><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mr7.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmr8.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmti10.pfb><C:/Users/jiach/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on PS02.pdf (7 pages, 180514 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 10 named destinations out of 1000 (max. 500000)
+ 195 PDF objects out of 1000 (max. 8388607)
+ 67 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
