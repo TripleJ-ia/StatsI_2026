@@ -64,3 +64,6 @@ std_residual <- find_std_residual(df)
 
 df <- read.csv("https://raw.githubusercontent.com/kosukeimai/qss/master/PREDICTION/women.csv", header=T)
 summary(df)
+
+cor.test(df$reserved, df$water)
+lm(water~reserved, data = df)

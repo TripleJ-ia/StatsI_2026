@@ -152,13 +152,28 @@ Chattopadhyay and Duflo were interested in whether women promote different polic
 
 \newpage
 \begin{enumerate}
-	\item [(a)] State a null and alternative (two-tailed) hypothesis. 
-	
+	\item [(a)] State a null and alternative (two-tailed) hypothesis. \\
+	\begin{doublespace}
+		$H_0$: The reservation policy has no effect on the number of new or repaired drinking water facilities in the villages. $\rho$ = 0 \\
+		$H_a$: The reservation policy has some effects on the number of new or repaired drinking water facilities in the villages. $\rho$ $\neq$ 0
+		
+	\end{doublespace}
+
 	\vspace{6cm}
 	\item [(b)] Run a bivariate regression to test this hypothesis in \texttt{R} (include your code!).
-	
+	\begin{doublespace}
+		\lstinputlisting[language=R, firstline=65, lastline=68]{PS02.R}
+		p-value = 0.0197 \\ 
+		If we have significant value $alpha$ set to be 0.05. P-value is smaller than $alpha$. We can reject the null hypotheses. We have sufficient evidence to conclude that the reservation policy has some effects on the number of the new or repaired drinking water facilities in the villages.
+	\end{doublespace}
 	\vspace{6cm}
 	\item [(c)] Interpret the coefficient estimate for reservation policy. 
+	
+	\begin{doublespace}
+		\lstinputlisting[language=R, firstline=69, lastline=69]{PS02.R}
+		Intercept = 14.738 and Slope = 9.252 \\
+		When the number of reservation policy number is 0, the number of new or repaired drinking water facilities in the villages is 14.738. For every number of increase in reservation policy, the number of new or repaired drinking water facilities in the villages increase by 9.252.
+	\end{doublespace}
 \end{enumerate}
 
 
