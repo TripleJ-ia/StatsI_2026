@@ -99,15 +99,16 @@
 	Calculate the $\chi^2$ test statistic by hand/manually (even better if you can do "by hand" in \texttt{R}).\\
 
 	\begin{doublespace}
-		\lstinputlisting[language=R, firstline=5, lastline=21]{PS02.R}
+		\lstinputlisting[language=R, firstline=3, lastline=29]{PS02_answersJX.R}
+		The $\chi^2$ test statistic is 3.791168.
 	\end{doublespace}
 	\newpage
 	\item [(b)]
 	Now calculate the p-value from the test statistic you just created (in \texttt{R}).\footnote{Remember frequency should be $>$ 5 for all cells, but let's calculate the p-value here anyway.}  What do you conclude if $\alpha = 0.1$?\\
 	\begin{doublespace}
-		\lstinputlisting[language=R, firstline=24, lastline=26]{PS02.R}
-		$H_0$: Driver's class and the police interaction are independent.
-		$H_a$: Driver's class and the police interaction are dependent.
+		\lstinputlisting[language=R, firstline=31, lastline=35]{PS02_answersJX.R}
+		$H_0$: Driver's class and the police interaction are independent.\\
+		$H_a$: Driver's class and the police interaction are dependent.\\
 		Since p-value $>$ $\alpha$, we fail to reject $H_0$, there is not sufficient evidence to conclude that the drivers' class and the police interaction are dependent.
 		
 	\end{doublespace}
@@ -127,12 +128,17 @@
 			Lower class & -0.3220306 & 1.641957  & -1.523026 \\
 			\hline
 		\end{tabular}
-		\lstinputlisting[language=R, firstline=28, lastline=59]{PS02.R}
+		\lstinputlisting[language=R, firstline=37, lastline=69]{PS02_answersJX.R}
 	\end{table}
 	
 	
 	\vspace{7cm}
-	\item [(d)] How might the standardized residuals help you interpret the results?  
+	\item [(d)] How might the standardized residuals help you interpret the results?  \\
+	\begin{doublespace}
+		The standardized residuals for "Not Stopped" are relatively small, meaning that the observed frequencies are close to the expected frequencies. Therefore, these cells contribute relatively little to the chi-square statistic.
+		
+		However, "Bribe Requested" and "Stopped/given warning" have relatively larger standardized residuals, meaning there are bigger differences between observed and expected frequencies. These cells contribute more to the chi-square statistic.
+	\end{doublespace}
 	
 \end{enumerate}
 \newpage
@@ -159,20 +165,22 @@ Chattopadhyay and Duflo were interested in whether women promote different polic
 		
 	\end{doublespace}
 
-	\vspace{6cm}
-	\item [(b)] Run a bivariate regression to test this hypothesis in \texttt{R} (include your code!).
+	\vspace{2cm}
+	\item [(b)] Run a bivariate regression to test this hypothesis in \texttt{R} (include your code!).\\
 	\begin{doublespace}
-		\lstinputlisting[language=R, firstline=65, lastline=68]{PS02.R}
-		p-value = 0.0197 \\ 
-		If we have significant value $alpha$ set to be 0.05. P-value is smaller than $alpha$. We can reject the null hypotheses. We have sufficient evidence to conclude that the reservation policy has some effects on the number of the new or repaired drinking water facilities in the villages.
+		\includegraphics[width=.65\textwidth]{reserved_water.pdf}
+		\vspace{4cm}
+		\lstinputlisting[language=R, firstline=73, lastline=83]{PS02_answersJX.R}
+		p-value = 0.01970398 \\ 
+		If we have significant value $\alpha$ set to be 0.05. P-value $<$ $\alpha$. We can reject the null hypotheses. We have sufficient evidence to conclude that the reservation policy has some effects on the number of the new or repaired drinking water facilities in the villages.
 	\end{doublespace}
-	\vspace{6cm}
+	\newpage
 	\item [(c)] Interpret the coefficient estimate for reservation policy. 
 	
 	\begin{doublespace}
-		\lstinputlisting[language=R, firstline=69, lastline=69]{PS02.R}
+		\lstinputlisting[language=R, firstline=85, lastline=86]{PS02_answersJX.R}
 		Intercept = 14.738 and Slope = 9.252 \\
-		When the number of reservation policy number is 0, the number of new or repaired drinking water facilities in the villages is 14.738. For every number of increase in reservation policy, the number of new or repaired drinking water facilities in the villages increase by 9.252.
+		When the number of reservation policy number is 0, the predicted number of new or repaired drinking water facilities in the villages is 14.738, on average. When the reservation policy is applied, the predicted number of new or repaired drinking water facilities in the villages increase by 9.252, on average.
 	\end{doublespace}
 \end{enumerate}
 
