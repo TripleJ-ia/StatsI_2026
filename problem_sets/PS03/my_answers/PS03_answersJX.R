@@ -84,7 +84,7 @@ scattor_question3 <- ggplot(inc.sub, aes(x = presvote, y = voteshare)) +
   geom_point() +
   geom_smooth(method = "lm", se = TRUE) +
   labs(x = "presvote", y = "voteshare", title = "question3 presvote vs voteshare")
-scattor_question3
+#scattor_question3
 ggsave("scattor_question3.pdf")
 
 #question3 3
@@ -96,11 +96,11 @@ regression_question4 <- lm(res_question1~res_question2)
 summary(regression_question4)
 
 #question4 2
-scattor_question4 <- ggplot(inc.sub, aes(x = res_question2, y = res_question1)) +
+scattor_question4 <- ggplot(data.frame(res_question1, res_question2), aes(x = res_question2, y = res_question1)) +
   geom_point() +
   geom_smooth(method = "lm", se = TRUE) +
   labs(x = "q2 residual", y = "q1 residual", title = "q2 residual vs q1 residual")
-scattor_question4
+#scattor_question4
 ggsave("scattor_question4.pdf")
 
 #5555555555555555555555555555555555555555555555555555555555555555555555555555555

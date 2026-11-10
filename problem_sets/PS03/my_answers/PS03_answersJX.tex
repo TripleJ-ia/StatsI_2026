@@ -344,7 +344,15 @@ F-statistic:  1303 on 2 and 3190 DF,  p-value: < 2.2e-16
 	$$\hat{y} = 0.449 + 0.036x_1 + 0.257x_2$$
 	where $y$ is the incumbent's \texttt{voteshare},  $x_1$ is \texttt{difflog} and $x_2$ is \texttt{presvote}.
 	\end{doublespace}
-		\item What is it in this output that is identical to the output in Question 4? Why do you think this is the case?
+		\item What is it in this output that is identical to the output in Question 4? Why do you think this is the case? \\
+		\begin{doublespace}
+			The coefficient for \texttt{presvote} in Question 5 (0.2569) is identical to the slope on the residuals from Question 2 in Question 4. The standard error (0.01176), t value (21.84) and residuals are also the same.
+
+			This is because the residuals from Question 1 are the part of \texttt{voteshare} not explained by \texttt{difflog}, and the residuals from Question 2 are the part of \texttt{presvote} not explained by \texttt{difflog}. Regressing the two set of residuals estimates the relationship between \texttt{presvote} and \texttt{voteshare} after removing the influence of \texttt{difflog} from both, which is the same as holding \texttt{difflog} constant.
+
+			So, holding \texttt{difflog} constant, a one-unit increase in \texttt{presvote} is associated with a 0.257-unit increase in \texttt{voteshare} on average.
+			
+		\end{doublespace}
 	\end{enumerate}
 
 
