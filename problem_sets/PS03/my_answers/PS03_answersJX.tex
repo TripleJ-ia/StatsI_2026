@@ -56,7 +56,13 @@
 	showtabs=false,                  
 	tabsize=2
 }
-\lstset{style=mystyle}
+\lstset{style=mystyle,
+ basicstyle=\linespread{0.9}\ttfamily\small,
+columns=flexible,
+keepspaces=true,
+aboveskip=4pt,
+belowskip=4pt
+}
 \newcommand{\Sref}[1]{Section~\ref{#1}}
 \newtheorem{hyp}{Hypothesis}
 
@@ -79,9 +85,8 @@
 	
 \noindent In this problem set, you will run several regressions and create an add variable plot (see the lecture slides) in \texttt{R} using the \texttt{incumbents\_subset.csv} dataset. Include all of your code.
 
-	\vspace{.5cm}
+\newpage
 \section*{Question 1}
-\vspace{.25cm}
 \noindent We are interested in knowing how the difference in campaign spending between incumbent and challenger affects the incumbent's vote share. 
 	\begin{enumerate}
 		\item Run a regression where the outcome variable is \texttt{voteshare} and the explanatory variable is \texttt{difflog}. \\
@@ -109,12 +114,14 @@ F-statistic:  1853 on 1 and 3191 DF,  p-value: < 2.2e-16
 			\end{verbatim}
 		\end{footnotesize}
 		\end{doublespace}
-		\item Make a scatterplot of the two variables and add the regression line. 	\vspace{7cm} \\
+		\item Make a scatterplot of the two variables and add the regression line. \\
 		\begin{doublespace}
 			\lstinputlisting[language=R, firstline=41, lastline=47]{PS03_answersJX.R}
 			\includegraphics[width=.65\textwidth]{scattor_question1.pdf}
 		\end{doublespace}
-		\item Save the residuals of the model in a separate object.	\vspace{7cm} \\
+		
+		\newpage
+		\item Save the residuals of the model in a separate object.	\\
 		\begin{doublespace}
 			\lstinputlisting[language=R, firstline=49, lastline=50]{PS03_answersJX.R}
 		\end{doublespace}
@@ -130,7 +137,7 @@ F-statistic:  1853 on 1 and 3191 DF,  p-value: < 2.2e-16
 	\end{footnotesize}
 	From the summary of the regression model, we can find that the intercept is 0.579 and the slope is 0.042. We can write the prediction equation as:
 	$$\hat{y} = 0.042x + 0.579$$
-	where $y$ is the \texttt{voteshare} and $x$ is \texttt{difflog}
+	where $y$ is \texttt{voteshare} and $x$ is \texttt{difflog}. On average, a one-unit increase in \texttt{difflog} is associated with a 0.042 unit increase in \texttt{voteshare}. This coefficient is statistically significant at the $\alpha = 0.05$ level ($p < 0.001$). When \texttt{difflog} is 0, the predicted \texttt{voteshare} is 0.579 (about 57.9\%).
 		\end{doublespace}
 	\end{enumerate}
 	
@@ -170,6 +177,7 @@ F-statistic: 307.7 on 1 and 3191 DF,  p-value: < 2.2e-16
 			\includegraphics[width=.65\textwidth]{scattor_question2.pdf}
 		\end{doublespace}
 		
+		\newpage
 		\item Save the residuals of the model in a separate object.
 		\begin{doublespace}
 			\lstinputlisting[language=R, firstline=71, lastline=71]{PS03_answersJX.R}
@@ -187,7 +195,7 @@ difflog     0.023837   0.001359   17.54   <2e-16 ***
 			\end{footnotesize}
 			From the summary of the regression model, we can find that the intercept is 0.508 and the slope is 0.024. We can write the prediction equation as:
 			$$\hat{y} = 0.024x + 0.508$$
-			where $y$ is the \texttt{presvote} and $x$ is the \texttt{difflog}
+			where $y$ is \texttt{presvote} and $x$ is the \texttt{difflog}. On average, one unit change in \texttt{difflog} is associated with 0.024 unit increase in \texttt{presvote}. This coefficient is statistically significant at the $\alpha = 0.05$ level ($p < 0.001$). When \texttt{difflog} is 0, the predicted \texttt{presvote} is 0.508 (about 50.8\%).
 		\end{doublespace}
 	\end{enumerate}
 	
@@ -222,13 +230,15 @@ F-statistic:   827 on 1 and 3191 DF,  p-value: < 2.2e-16
 			\end{verbatim}
 		\end{footnotesize}
 	\end{doublespace}
-			
+		
+		\newpage
 		\item Make a scatterplot of the two variables and add the regression line. 
 		\begin{doublespace}
 		\lstinputlisting[language=R, firstline=83, lastline=88]{PS03_answersJX.R}
 		\includegraphics[width=.65\textwidth]{scattor_question3.pdf}
 		\end{doublespace}
-
+		
+		\newpage
 		\item Write the prediction equation.
 		\begin{doublespace}
 		\begin{footnotesize}
@@ -241,7 +251,7 @@ presvote    0.388018   0.013493   28.76   <2e-16 ***
 		\end{footnotesize}
 		From the summary of the regression model, we can find that the intercept is 0.441 and the slope is 0.388. We can write the prediction equation as:
 			$$\hat{y} = 0.388x + 0.441$$
-			where $y$ is the \texttt{voteshare} and $x$ is the \texttt{presvote}
+			where $y$ is \texttt{voteshare} and $x$ is the \texttt{presvote}. On average, one unit change in \texttt{presvote} is associated with 0.388 unit increase in \texttt{voteshare}. This coefficient is statistically significant at the $\alpha = 0.05$ level ($p < 0.001$). When \texttt{presvote} is 0, the predicted \texttt{voteshare} is 0.441 (about 44.1\%).
 \end{doublespace}
 	\end{enumerate}
 	
@@ -282,6 +292,7 @@ presvote    0.388018   0.013493   28.76   <2e-16 ***
 			\lstinputlisting[language=R, firstline=98, lastline=104]{PS03_answersJX.R}
 			\includegraphics[width=.65\textwidth]{scattor_question4.pdf}
 		\end{doublespace}
+		\newpage
 		\item Write the prediction equation.
 		\begin{doublespace}
 		\begin{footnotesize}
@@ -294,7 +305,7 @@ res_question2  2.569e-01  1.176e-02   21.84   <2e-16 ***
 		\end{footnotesize}
   		From the summary of the regression model, we can find that the intercept is $-5.934 \times 10^{-18}$, which is effectively 0, and the slope is 0.2569. We can write the prediction equation as:
 		$$\hat{y} = 0.2569x$$
-		where $y$ is the residuals from Question 1 and $x$ is the residuals from Question 2.
+		where $y$ is the residuals from Question 1 and $x$ is the residuals from Question 2. The residuals from Question 1 are the part of \texttt{voteshare} not explained by \texttt{difflog}, and the residuals from Question 2 are the part of \texttt{presvote} not explained by \texttt{difflog}. On average, a one-unit increase in the Question 2 residuals is associated with a 0.257 increase in the Question 1 residuals.
 \end{doublespace}
 	\end{enumerate}
 	
@@ -329,6 +340,7 @@ Multiple R-squared:  0.4496,	Adjusted R-squared:  0.4493
 F-statistic:  1303 on 2 and 3190 DF,  p-value: < 2.2e-16
 	\end{verbatim}
 \end{footnotesize}
+		\newpage
 		\item Write the prediction equation.
 		\begin{doublespace}
 		\begin{footnotesize}
@@ -342,8 +354,9 @@ F-statistic:  1303 on 2 and 3190 DF,  p-value: < 2.2e-16
 		\end{footnotesize}
 	From the summary of the regression model, we can find that the intercept is 0.449, the coefficient for \texttt{difflog} is 0.036, and the coefficient for \texttt{presvote} is 0.257. We can write the prediction equation as:
 	$$\hat{y} = 0.449 + 0.036x_1 + 0.257x_2$$
-	where $y$ is the incumbent's \texttt{voteshare},  $x_1$ is \texttt{difflog} and $x_2$ is \texttt{presvote}.
+	where $y$ is the incumbent's \texttt{voteshare}, $x_1$ is \texttt{difflog} and $x_2$ is \texttt{presvote}. On average, a one-unit increase in \texttt{difflog} is associated with a 0.036 unit increase in \texttt{voteshare}, holding \texttt{presvote} constant. On average, a one-unit increase in \texttt{presvote} is associated with a 0.257 unit increase in \texttt{voteshare}, holding \texttt{difflog} constant. Both coefficients are statistically significant at the $\alpha = 0.05$ level ($p < 0.001$). When both \texttt{difflog} and \texttt{presvote} are 0, the predicted \texttt{voteshare} is 0.449 (about 44.9\%).
 	\end{doublespace}
+		\newpage
 		\item What is it in this output that is identical to the output in Question 4? Why do you think this is the case? \\
 		\begin{doublespace}
 			The coefficient for \texttt{presvote} in Question 5 (0.2569) is identical to the slope on the residuals from Question 2 in Question 4. The standard error (0.01176), t value (21.84) and residuals are also the same.

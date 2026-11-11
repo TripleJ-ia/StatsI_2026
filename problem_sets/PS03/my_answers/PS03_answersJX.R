@@ -41,9 +41,9 @@ summary(regression_question1)
 #question1 2
 library(ggplot2)
 scattor_question1 <- ggplot(inc.sub, aes(x = difflog, y = voteshare)) +
-  geom_point() +
+  geom_point(size = 0.8, alpha = 0.5) +
   geom_smooth(method = "lm", se = TRUE) +
-  labs(x = "difflog", y = "voteshare", title = "question1 difflog vs voteshare")
+  labs(x = "difflog", y = "voteshare", title = "Incumbent Vote Share and Campaign Spending Gap")
 ggsave("scattor_question1.pdf")
 
 #question1 3
@@ -61,9 +61,9 @@ summary(regression_question2)
 
 #question2 2
 scattor_question2 <- ggplot(inc.sub, aes(x = difflog, y = presvote)) +
-  geom_point() +
+  geom_point(size = 0.8, alpha = 0.5) +
   geom_smooth(method = "lm", se = TRUE) +
-  labs(x = "difflog", y = "presvote", title = "question2 difflog vs presvote")
+  labs(x = "difflog", y = "presvote", title = "Presidential Vote Share and Campaign Spending Gap")
 #scattor_question2
 ggsave("scattor_question2.pdf")
 
@@ -81,9 +81,9 @@ summary(regression_question3)
 
 #question3 2
 scattor_question3 <- ggplot(inc.sub, aes(x = presvote, y = voteshare)) +
-  geom_point() +
+  geom_point(size = 0.8, alpha = 0.5) +
   geom_smooth(method = "lm", se = TRUE) +
-  labs(x = "presvote", y = "voteshare", title = "question3 presvote vs voteshare")
+  labs(x = "presvote", y = "voteshare", title = "Incumbent Vote Share and Presidential Vote Share")
 #scattor_question3
 ggsave("scattor_question3.pdf")
 
@@ -97,9 +97,9 @@ summary(regression_question4)
 
 #question4 2
 scattor_question4 <- ggplot(data.frame(res_question1, res_question2), aes(x = res_question2, y = res_question1)) +
-  geom_point() +
+  geom_point(size = 0.8, alpha = 0.5) +
   geom_smooth(method = "lm", se = TRUE) +
-  labs(x = "q2 residual", y = "q1 residual", title = "q2 residual vs q1 residual")
+  labs(x = "Presvote residuals (part not explained by difflog)", y = "Voteshare residuals (part not explained by difflog)", title = "q2 residual vs q1 residual")
 #scattor_question4
 ggsave("scattor_question4.pdf")
 
